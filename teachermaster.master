@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="teachermaster.master.cs" Inherits="teachermaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    
+     <link href="styles/menu.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        h1
+        {
+            font-size:40px;
+            color:red;
+            margin:0px 0px 0px 15px;
+            background-color: #FFFFFF;
+        }
+         h2
+        {
+            font-size:large;
+            color:red;
+            margin:0px;
+        }
+        
+        .style1
+        {
+            width: 943px;
+        }
+        
+        .style2
+        {
+            font-family: "Comic Sans MS";
+        }
+        
+        .style3
+        {
+            width: 115px;
+        }
+        
+    </style>
+</head>
+<body style=" margin-top:20px;background-color:#FFFFFF;">
+<table style="height: 80px; width: 1321px">
+<tr>
+<td class="style3"><h1>
+    <asp:Image ID="Image1" runat="server" Height="79px" 
+        ImageUrl="~/images/Login.jpg" Width="108px" />
+    </h1></td>
+<td class="style1"><h1 class="style2">Student Attendance</h1></td>
+</tr>
+</table>
+<div id="ai" >
+    <form id="form1" runat="server">
+    <center>         
+ <ul id="menu">
+    <li><a href="#">Students</a>
+    <ul>
+    <li><a href="adminaddstudents.aspx">Add</a></li>
+    <li><a href="viewstudents.aspx">View</a></li>
+    </ul>
+    </li> 
+    <li><a href="#">Attendance</a>
+    <ul>
+    <li><a href="addattendance.aspx">Add Attendance</a></li>
+    <li><a href="viewattendance.aspx">View Attendance</a></li>
+    </ul>
+    </li> 
+    <li><a href="addclass.aspx">AddClass</a></li>
+    <li><a href="home.aspx">Logout</a></li>
+</ul>
+    </center>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </div>
+    <p>
+        &nbsp;</p>
+</body>
+</html>
